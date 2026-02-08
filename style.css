@@ -1,0 +1,108 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+    radial-gradient(circle at top,#ffe0ec,#ffd1e3,#ffc0d9);
+  font-family:'Poppins',Arial,sans-serif;
+  overflow:hidden;
+}
+
+/* floating hearts */
+body::before{
+  content:"💖 💕 💘 💗 💓";
+  position:absolute;
+  font-size:42px;
+  opacity:0.18;
+  animation: float 14s linear infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(110vh);}
+  100%{transform:translateY(-120vh);}
+}
+
+.card{
+  background: rgba(255,255,255,0.96);
+  padding:40px 32px;
+  border-radius:35px;
+  width:340px;
+  text-align:center;
+  box-shadow:
+    0 30px 70px rgba(255,77,109,0.35),
+    inset 0 0 0 1px rgba(255,77,109,0.1);
+  animation: pop 0.7s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(0.65);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+
+h1{
+  color:#ff2f68;
+  font-size:26px;
+  margin-bottom:6px;
+}
+
+h2{
+  font-size:20px;
+  margin-bottom:16px;
+}
+
+.hint{
+  font-size:14px;
+  color:#777;
+}
+
+.buttons{
+  margin-top:28px;
+  position:relative;
+  height:72px;
+}
+
+button{
+  padding:13px 30px;
+  border:none;
+  border-radius:35px;
+  font-size:16px;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+
+.yes{
+  background: linear-gradient(135deg,#ff2f68,#ff8fb1);
+  color:white;
+  box-shadow:0 10px 25px rgba(255,47,104,0.45);
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.08);}
+}
+
+.yes:hover{
+  transform:scale(1.15);
+}
+
+.no{
+  background:#f2f2f2;
+  color:#444;
+  position:absolute;
+  right:0;
+}
+
+#text{
+  margin-top:18px;
+  font-weight:600;
+  color:#ff2f68;
+  min-height:22px;
+}
