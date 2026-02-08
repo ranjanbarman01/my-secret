@@ -15,6 +15,14 @@ noBtn.addEventListener("mouseover", () => {
 
   text.innerText = funny[Math.floor(Math.random()*funny.length)];
 });
+// mobile touch support
+noBtn.addEventListener("touchstart", () => {
+  noBtn.style.position = "relative";
+  noBtn.style.left = Math.random()*120 + "px";
+  noBtn.style.top = Math.random()*80 + "px";
+
+  text.innerText = funny[Math.floor(Math.random()*funny.length)];
+});
 
 function goYes(){
   window.location.href = "yes.html";

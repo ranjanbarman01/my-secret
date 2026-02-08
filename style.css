@@ -106,3 +106,41 @@ button{
   color:#ff2f68;
   min-height:22px;
 }
+@media (max-width: 600px) {
+
+  body{
+    padding:15px;
+  }
+
+  .card{
+    width:100%;
+    max-width:340px;
+    padding:30px 22px;
+    border-radius:25px;
+  }
+
+  h1{
+    font-size:22px;
+  }
+
+  h2{
+    font-size:18px;
+  }
+
+  .hint{
+    font-size:13px;
+  }
+
+  .buttons{
+    height:80px;
+  }
+
+  button{
+    font-size:15px;
+    padding:12px 26px;
+  }
+
+  #text{
+    font-size:14px;
+  }
+}
